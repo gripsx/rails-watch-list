@@ -22,10 +22,4 @@
 </div>
 
 <br>
-<a class="btn btn-flat d-flex justify-content-center" href="#">Create a NEW movie list!</a>
-
-<%= cl_image_tag("xcq7et1smebrotcrcacm",
-  width: 400, height: 300, crop: :fill) %>
-
-<%= cl_image_tag("w5gzxfqbcrijadu7t1i8",
-  width: 150, height: 150, crop: :thumb, gravity: :face) %>
+<%= link_to 'Create a NEW movie list!', new_list_path, class: "btn btn-flat d-flex justify-content-center" %>
