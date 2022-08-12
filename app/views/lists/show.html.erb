@@ -6,7 +6,7 @@
 
 <br>
 <div class="card-product">
-  <% @bookmarks.each do | bookmark | %>
+  <% @list.bookmarks.each do | bookmark | %>
     <img src="<%= bookmark.movie.poster_url %>"/>
     <div class="card-product-infos">
       <h2><strong><%= bookmark.movie.title %></strong></h2>
