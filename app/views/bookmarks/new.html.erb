@@ -1,1 +1,10 @@
-<h1>new bookmark</h1>
+<h1>Add a new bookmark</h1>
+
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.input :comment, placeholder: 'Enter a comment about the movie' %>
+  <%= f.association :movie, collection: Movie.all.order(:title), prompt: 'Select a movie' %>
+  <%= f.association :movie, collection: Movie.all.order(:poster_url), prompt: 'Select an Image' %>
+  <%= f.submit class: 'btn btn-flat' %>
+<% end %>
+<br>
+<%= link_to 'Go Back', list_path(@list), class: "btn btn-flat" %>

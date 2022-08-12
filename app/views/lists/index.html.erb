@@ -7,18 +7,16 @@
 </div>
 
 <br>
+
 <div class="cards">
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://wallpaperaccess.com/full/3148329.jpg)">
-    Action
-  </div>
 
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://wallpaperaccess.com/full/911212.jpg)">
-    Animation
+  <% @lists.each do | list | %>
+  <div class="card-category"
+  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path list.photo.key, height: 300, crop: :fill, gravity: :face %>')">
+  <%= link_to list.name, list_path(list) %>
   </div>
+  <% end %>
 
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://wallpaperaccess.com/full/1561410.jpg)">
-    Classics
-  </div>
 </div>
 
 <br>

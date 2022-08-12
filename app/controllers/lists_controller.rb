@@ -2,6 +2,7 @@ class ListsController < ApplicationController
   before_action :set_list, only: [:show]
 
   def index
+
     @lists = List.all
   end
 
@@ -10,6 +11,7 @@ class ListsController < ApplicationController
   end
 
   def show
+    @bookmarks = Bookmark.all
   end
 
   def create
@@ -28,6 +30,6 @@ class ListsController < ApplicationController
   end
 
   def list_params
-    params.require(:list).permit(:name)
+    params.require(:list).permit(:name, :photo)
   end
 end
